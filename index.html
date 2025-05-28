@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adele</title>
     <link href="styles.css" rel="stylesheet"></link>
+    <script src="main.js" defer></script>
 
 </head>
 <body>
@@ -21,59 +22,32 @@
     </nav>
 
     <main>
-        <article>
-            <section class="animal-card-text">
-                <h1> Nome animale</h1>
-                <small>
-                    <span>2 years old</span>  - 
-                    <span>cat</span>
-                </small>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur 
-                    adipisicing elit. Aliquam animi, velit quod 
-                    quos architecto odit voluptatibus quaerat 
-                    itaque debitis, quibusdam dolorem corporis 
-                    ad sint cum labore, culpa ab fuga distinctio.
-                </p>
+        <template id="animal-card-template">
+            <article>
+                <section class="animal-card-text">
+                    <h1> Nome animale</h1>
+                    <small>
+                        <span>2 years old</span>  -  <span>cat</span>
+                    </small>
+                    <p class>
+                        Lorem, ipsum dolor sit amet consectetur 
+                        adipisicing elit. Aliquam animi, velit quod 
+                        quos architecto odit voluptatibus quaerat 
+                        itaque debitis, quibusdam dolorem corporis 
+                        ad sint cum labore, culpa ab fuga distinctio.
+                    </p>
                 
-                    <a href="http://www.youtube.com" 
-                    target="_blank" 
-                    class="adopt-button">Adopt me</a>
+                        <a href="http://www.youtube.com" 
+                        target="_blank" 
+                        class="adopt-button">Adopt me</a>
             
-            </section>
+                </section>
             
-            <section class="animal-card-photo">
-                <img src="static/dog2.webp">
-            </section>
-        </article>
-
-        <article>
-            <section class="animal-card-text">
-                <h1> Nome animale</h1>
-                <small>
-                    <span>2 years old</span>  - 
-                    <span>cat</span>
-                </small>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur 
-                    adipisicing elit. Aliquam animi, velit quod 
-                    quos architecto odit voluptatibus quaerat 
-                    itaque debitis, quibusdam dolorem corporis 
-                    ad sint cum labore, culpa ab fuga distinctio.
-                </p>
-        
-                    <a href="http://www.youtube.com" 
-                    target="_blank" 
-                    class="adopt-button">Adopt me</a>
-                
-            </section>
-            
-            <section class="animal-card-photo">
-                <img src="static/dog2.webp">
-            </section>
-        </article>
-    
-
+                <section class="animal-card-photo">
+                    <img src="static/dog2.webp">
+                </section>
+            </article>
+        </template>
     </main>
 
 </body>
