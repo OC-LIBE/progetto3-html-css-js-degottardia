@@ -63,7 +63,7 @@ nav button{
 }
 
 nav button:hover {
-    background-color: rgb(196, 116, 197)s;
+    background-color: rgb(187, 37, 187);
     color: white;
     cursor: pointer;
 }
@@ -79,9 +79,17 @@ main article{
     flex-direction: row-reverse;
     border-radius: 30px;
     overflow: hidden;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
+.animal-card-age-infobase{
+    color: gray; 
+
+}
+
+.animal-card-species {
+    text-transform: capitalize;
+}
 .animal-card-text {
     padding: 1rem 2rem;
     
@@ -101,7 +109,7 @@ main article{
 }
 
 main article:hover img{
-    transform: rotate(360deg) scale(5);
+    transform: rotate(30deg) scale(2);
     
 }
 
