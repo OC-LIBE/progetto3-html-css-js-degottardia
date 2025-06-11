@@ -60,7 +60,9 @@ async function displayPets() {
         const description= clone.querySelector('.animal-card-description')
         description.textContent = pet.description;
         
-       
+       const adoptionbutton = clone.querySelector('.adopt-button')
+       adoptionbutton.textContent = "Adopt " + pet.name
+
         //Aggiungo l'articolo alla pagina
         wrapper.appendChild(clone);
 
@@ -68,6 +70,29 @@ async function displayPets() {
     )
 }
 
-displayPets()
+
+// displayPets()
 
 // https://frapollif.github.io/pet-adoption-data/pets.json 
+
+function displayFiltersAnimals(e) {
+    const filterSpecies = e.target.dataset.filter;
+    if(filterSpecies == "all"){displayPets()}
+    if(filterSpecies == "dog"){displayPets()}
+    if(filterSpecies == "cat"){displayPets()}
+    if(filterSpecies == "rabbit"){displayPets()}
+
+};
+
+const filterButtons = document.querySelectorAll("nav button");
+
+filterButtons.forEach(button => {
+    // button.dataset.filter //i trattini nel nome da html a js fanno così: filter-animal => filterAnimal
+    button.addEventListener('click', (e) => { //due elementi, che evento vuole (click) e lancia la funzione
+        displayFiltersAnimals(e)
+    }
+    )
+});
+
+//console.log(filterButtons)
+
