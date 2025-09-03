@@ -3,8 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adele</title>
+    <link href="styles.css" rel="stylesheet"></link>
+    <script src="main.js" defer></script>
+
 </head>
 <body>
+    <header> 
+        <h1>Welcome</h1>
+        <h2>Our friends need a home!</h2>
+    </header>   
+
+    <nav>
+        <button data-filter="all">Show all</button> 
+        <!-- data attribute = attributo generico  -->
+        <button data-filter="dog">Only dogs</button>   
+        <button data-filter="cat">Only cats</button>
+        <button data-filter="rabbit">Only rabbit</button>
+    </nav>
+
+    <main>
+        <template id="animal-card-template">
+            <article>
+                <section class="animal-card-text">
+                    <h1 class = "animal-card-name"> Nome animale</h1>
+                    <small class="animal-card-age-infobase">
+                        <span class="animal-card-age">2 years old</span>  -  <span class="animal-card-species">cat</span>
+                    </small>
+                    <p class="animal-card-description">
+                        Lorem, ipsum dolor sit amet consectetur 
+                        adipisicing elit. Aliquam animi, velit quod 
+                        quos architecto odit voluptatibus quaerat 
+                        itaque debitis, quibusdam dolorem corporis 
+                        ad sint cum labore, culpa ab fuga distinctio.
+                    </p>
+                
+                        <a href="http://www.youtube.com" 
+                        target="_blank" 
+                        class="adopt-button">Adopt me</a>
+            
+                </section>
+            
+                <section class="animal-card-photo">
+                    <img src="static/dog2.webp">
+                </section>
+            </article>
+        </template>
+    </main>
+
 </body>
 </html>
