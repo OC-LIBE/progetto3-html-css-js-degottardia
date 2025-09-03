@@ -122,9 +122,10 @@ main article:hover img{
     text-decoration: none;
 }
 
-.animal-card-text a:hover{ */
+.animal-card-text a:hover{ 
     border-radius: 5px;
     padding: 10px;
     color: rgb(255, 255, 255);
     background-color: rgb(145, 22, 147);
 }
+

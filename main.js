@@ -71,18 +71,11 @@ async function displayPets() {
 }
 
 
-// displayPets()
+displayPets()
+
 
 // https://frapollif.github.io/pet-adoption-data/pets.json 
 
-function displayFiltersAnimals(e) {
-    const filterSpecies = e.target.dataset.filter;
-    if(filterSpecies == "all"){displayPets()}
-    if(filterSpecies == "dog"){displayPets()}
-    if(filterSpecies == "cat"){displayPets()}
-    if(filterSpecies == "rabbit"){displayPets()}
-
-};
 
 const filterButtons = document.querySelectorAll("nav button");
 
@@ -96,3 +89,37 @@ filterButtons.forEach(button => {
 
 //console.log(filterButtons)
 
+
+function displayFiltersAnimals(e) {
+ 
+    const filter= e.target.dataset.filter
+       console.log(filter)
+    const allArticle = document.querySelectorAll("article")
+    allArticle.forEach(articolo => {
+        const specie = articolo.querySelector(".animal-card-species").innerText.toLowerCase()
+        if(e.target.dataset.filter =="all"){
+            articolo.style.display = "flex"
+        }
+        else if(e.target.dataset.filter != specie){
+            articolo.style.display = "none"
+        }
+        else{
+            articolo.style.display = "flex"
+        }
+    })
+    
+
+    // const bottonepremuto = e.target.dataset.filter
+    //     if(bottonepremuto =="all"){pet.style.display()}
+    
+
+        
+    
+    
+    // const filterSpecies = e.target.dataset.filter;
+    // if(filterSpecies == "all"){displayPets()}
+    // if(filterSpecies == "dog"){displayDogs()}
+    // if(filterSpecies == "cat"){displayCats()}
+    // if(filterSpecies == "rabbit"){displayRabbits()}
+
+};
